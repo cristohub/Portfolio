@@ -1,6 +1,8 @@
 import React from 'react';
 import EstadoTrabajo from "../components/EstadoTrabajo";
 import cristoferImg from '../assets/images/cristofer-sani.png';
+import CallToAction from "../components/CallToAction";
+
 
 const Home: React.FC = () => {
   return (
@@ -53,6 +55,17 @@ const Home: React.FC = () => {
 
     </div>
   </div>
+</section>
+
+
+<section>
+   <CallToAction
+        titulo="¿Necesitas Un Sitio Web A Medida?"
+        descripcion="Cuéntame tu idea y la hacemos realidad."
+        imagen="/cta-image.png"
+        textoBoton="Contactar"
+        enlaceBoton="#contacto"
+      />
 </section>
 
 
