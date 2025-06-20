@@ -6,7 +6,7 @@ interface Props {
 }
 
 const FooterItem: React.FC<Props> = ({ title, links }) => (
-  <div className="col-6 col-md-4">
+  <div className="col-12 text-center col-md-4">
     <h5>{title}</h5>
     <ul className="list-unstyled">
       {links.map((link, idx) => (
