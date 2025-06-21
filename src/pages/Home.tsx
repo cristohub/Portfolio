@@ -2,7 +2,7 @@ import React from 'react';
 import EstadoTrabajo from "../components/EstadoTrabajo";
 import cristoferImg from '../assets/images/cristofer-sani.png';
 import CallToAction from "../components/CallToAction";
-
+import ContactSection from "../components/ContactSection";
 
 const Home: React.FC = () => {
   return (
@@ -69,6 +69,12 @@ const Home: React.FC = () => {
 </section>
 
 
+
+
+
+
+
+    <ContactSection />
 
 
     

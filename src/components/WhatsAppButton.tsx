@@ -6,8 +6,8 @@ const WhatsAppButton: React.FC = () => {
     <FloatingWhatsApp
       phoneNumber="+34691010409"
       accountName="Cristofer Sani"
-      avatar="/Cristofer-Sani.png" // Pon tu logo en /public/logo.png
-      chatMessage="Hola 👋 ¿En qué podemos ayudarte?"
+      avatar="/Cristofer-Sani.png" 
+      chatMessage="Hola ¿En qué puedo ayudarte?"
       statusMessage="En línea"
       placeholder="Escribe tu mensaje..."
       darkMode={false}
