@@ -70,7 +70,7 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section className="py-5" style={{ background: 'linear-gradient(135deg, #5f3dc4, #4431a1)' }}>
+    <section className="py-5 px-3" style={{ background: 'linear-gradient(135deg, #5f3dc4, #4431a1)' }}>
       <div className="container">
         <div className="row align-items-center text-white">
           {/* Izquierda */}
@@ -95,7 +95,7 @@ const ContactSection: React.FC = () => {
           </div>
 
           {/* Derecha - Formulario */}
-          <div className="col-md-6 bg-white text-dark p-4 rounded-3 shadow">
+          <div className="col-md-6 bg-white text-dark p-4 shadow" style={{ borderRadius: '34px' }}>
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label className="form-label fw-semibold" htmlFor="intereses">Estoy interesado en:</label>
