@@ -28,8 +28,8 @@ const Home: React.FC = () => {
       </div>
 
       {/* Contenido */}
-      <div className="col-12 col-md-6">
-        <div className="mt-4">
+      <div className="col-12 col-md-4 ">
+        <div className="mt-4 text-end">
           <EstadoTrabajo />
         </div>
 
@@ -41,7 +41,7 @@ const Home: React.FC = () => {
           <a href="/cv.pdf" target="_blank" className="text-decoration-underline text-dark">Ver CV</a>
         </div>
 
-        <hr className="my-4" />
+        <hr className="my-4 w-50" />
 
         <div className="d-flex gap-4 fs-3">
           <a href="https://linkedin.com/in/tuusuario" target="_blank" className="text-primary">
