@@ -6,9 +6,9 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    titulo: "Mr. Peto",
+    titulo: "Psicología Fprense",
     descripcion: "Diseño web e identidad de marca",
-    imagen: "/assets/img/peto.jpg"
+    imagen: "/assets/images/projects/Paloma-R.png"
   },
   {
     titulo: "Buna Cafetería",
@@ -16,6 +16,21 @@ export const projects: Project[] = [
     imagen: "/assets/img/buna.jpg"
   },
   {
+    titulo: "Camper Box",
+    descripcion: "Diseño web e identidad de marca",
+    imagen: "/assets/img/camper.jpg"
+  },
+   {
+    titulo: "Camper Box",
+    descripcion: "Diseño web e identidad de marca",
+    imagen: "/assets/img/camper.jpg"
+  },
+   {
+    titulo: "Camper Box",
+    descripcion: "Diseño web e identidad de marca",
+    imagen: "/assets/img/camper.jpg"
+  },
+   {
     titulo: "Camper Box",
     descripcion: "Diseño web e identidad de marca",
     imagen: "/assets/img/camper.jpg"
