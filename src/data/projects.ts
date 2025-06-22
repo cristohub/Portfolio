@@ -6,14 +6,14 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    titulo: "Psicología Fprense",
+    titulo: "Psicología Forense",
     descripcion: "Diseño web e identidad de marca",
     imagen: "/assets/images/projects/Paloma-R.png"
   },
   {
-    titulo: "Buna Cafetería",
+    titulo: "Autocares y Microbuses HBV ",
     descripcion: "Identidad de marca",
-    imagen: "/assets/img/buna.jpg"
+     imagen: "/assets/images/projects/Autocares.png"
   },
   {
     titulo: "Camper Box",
