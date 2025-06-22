@@ -1,9 +1,9 @@
-import React from 'react';
-import FooterItem from './FooterItem';
-import { footerLinks } from '../data/footerLinks';
+import React from "react";
+import FooterItem from "./FooterItem";
+import { footerLinks } from "../data/footerLinks";
 
 const Footer: React.FC = () => (
- <footer className="bg-dark text-white py-4 mt-auto">
+  <footer className="bg-dark text-white py-4 mt-auto">
     <div className="container">
       <div className="row">
         {footerLinks.map((group, index) => (
@@ -11,7 +11,10 @@ const Footer: React.FC = () => (
         ))}
       </div>
       <hr className="border-light mt-4" />
-      <p className="text-center mb-0">{'\u00A9'} {new Date().getFullYear()} Cristofer Sani. Todos los derechos reservados.</p>
+      <p className="text-center mb-0">
+        {"\u00A9"} {new Date().getFullYear()} Cristofer Sani. Todos los derechos
+        reservados.
+      </p>
     </div>
   </footer>
 );

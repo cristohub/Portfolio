@@ -1,12 +1,12 @@
-import React from 'react';
-import { FloatingWhatsApp } from 'react-floating-whatsapp';
+import React from "react";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 const WhatsAppButton: React.FC = () => {
   return (
     <FloatingWhatsApp
       phoneNumber="+34691010409"
       accountName="Cristofer Sani"
-      avatar="/Cristofer-Sani.png" 
+      avatar="/Cristofer-Sani.png"
       chatMessage="Hola ¿En qué puedo ayudarte?"
       statusMessage="En línea"
       placeholder="Escribe tu mensaje..."
