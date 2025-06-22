@@ -7,7 +7,7 @@ const ProyectosSlider: React.FC = () => {
     <section className="mt-5">
       <h2 className="text-center  fw-bold mb-4">Proyectos Realizados</h2>
       <div
-        className="d-flex justify-content-center overflow-auto bg-info gap-3 px-3 py-4"
+        className="d-flex overflow-auto  bg-info gap-3 px-3 py-4"
         style={{
           overflowX: "auto",
           scrollbarWidth: "none", // Firefox
