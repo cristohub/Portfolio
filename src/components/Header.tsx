@@ -46,7 +46,7 @@ const Header: React.FC = () => {
         tabIndex={-1}
         id="offcanvasMenu"
         aria-labelledby="offcanvasMenuLabel"
-        style={{ zIndex: 2000, height: "100vh" }} // altura completa
+        style={{ zIndex: 2000, height: "100vh", width: "320px" }}
       >
         <div className="offcanvas-header">
           <h5 className="offcanvas-title" id="offcanvasMenuLabel">
