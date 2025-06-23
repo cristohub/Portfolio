@@ -40,13 +40,14 @@ const Home: React.FC = () => {
                 Desarrollador De Aplicaciones Web
               </h2>
 
-              <div className="mt-4 d-flex align-items-center gap-2 fw-semibold">
-                <i className="bi bi-box-arrow-up-right text-danger"></i>
+              <div className="mt-4  d-flex align-items-center gap-2 fw-semibold">
                 <a
                   href="/cv.pdf"
                   target="_blank"
-                  className="text-decoration-underline text-dark"
+                  rel="noopener noreferrer"
+                  className="btn btn-danger text-light d-inline-flex align-items-center gap-2"
                 >
+                  <i className="bi bi-box-arrow-up-right"></i>
                   Ver CV
                 </a>
               </div>

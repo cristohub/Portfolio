@@ -19,9 +19,9 @@ export const projects: Project[] = [
      link: "https://www.autocares-hbv.com/"
   },
   {
-    titulo: "Camper Box",
+    titulo: "DepaUni",
     descripcion: "Diseño web e identidad de marca",
-    imagen: "/assets/img/camper.jpg",
+    imagen: "/assets/images/projects/Depauni.png",
     link: "https://psicologia-forense.com"
   },
    {

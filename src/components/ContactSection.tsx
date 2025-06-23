@@ -3,15 +3,20 @@ import Swal from "sweetalert2";
 import emailjs from "@emailjs/browser";
 
 const ContactSection: React.FC = () => {
-  const [selectedInterest, setSelectedInterest] =
-    useState<string>("Diseño UX/UI");
+  const [selectedInterest, setSelectedInterest] = useState<string>("");
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [comment, setComment] = useState("");
 
-  const interests = ["Diseño UX/UI", "Web design", "Design system", "Other"];
+  const interests = [
+    "Diseño UX/UI",
+    "Desarrollo web",
+    "Desarrollo de sistema",
+    "Colaboración",
+    "Otra opción",
+  ];
 
   const validateEmail = (email: string) =>
     /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -21,6 +26,8 @@ const ContactSection: React.FC = () => {
     e.preventDefault();
 
     const errors = [];
+
+    if (!selectedInterest) errors.push("Por favor, selecciona un interés.");
     if (!name.trim()) errors.push("El nombre es obligatorio.");
     if (!lastName.trim()) errors.push("El apellido es obligatorio.");
     if (!email.trim() || !validateEmail(email))
@@ -158,7 +165,7 @@ const ContactSection: React.FC = () => {
                   type="text"
                   className="form-control"
                   id="nombre"
-                  placeholder="Jhon"
+                  placeholder="Ingresa tu nombre"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   required
@@ -173,7 +180,7 @@ const ContactSection: React.FC = () => {
                   type="text"
                   className="form-control"
                   id="apellido"
-                  placeholder="Smith"
+                  placeholder="Ingresa tu apellido"
                   value={lastName}
                   onChange={(e) => setLastName(e.target.value)}
                   required
@@ -188,7 +195,7 @@ const ContactSection: React.FC = () => {
                   type="tel"
                   className="form-control"
                   id="telefono"
-                  placeholder="691010409"
+                  placeholder="Tu número de teléfono"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   required
@@ -203,7 +210,7 @@ const ContactSection: React.FC = () => {
                   type="email"
                   className="form-control"
                   id="email"
-                  placeholder="email@gmail.com"
+                  placeholder="Tu correo electrónico"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
@@ -216,6 +223,7 @@ const ContactSection: React.FC = () => {
                 </label>
                 <textarea
                   className="form-control"
+                  placeholder="Déjanos tu comentario o consulta"
                   id="comentario"
                   rows={4}
                   value={comment}
