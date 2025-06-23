@@ -8,7 +8,7 @@ import SliderProjects from "../components/SliderProjects";
 const Home: React.FC = () => {
   return (
     <>
-      <section>
+      <section id="inicio">
         <div className="container-fluid">
           {" "}
           {/* Aquí el contenedor */}

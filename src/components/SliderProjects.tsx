@@ -4,7 +4,7 @@ import { projects } from "../data/projects";
 
 const ProyectosSlider: React.FC = () => {
   return (
-    <section className="mt-5 mb-5">
+    <section className="mt-5 mb-5" id="porta">
       <h2 className="fw-bold mb-4 px-4">
         Trabajos realizados y colaboraciones.
       </h2>

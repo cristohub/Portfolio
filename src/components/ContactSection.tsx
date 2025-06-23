@@ -81,6 +81,7 @@ const ContactSection: React.FC = () => {
 
   return (
     <section
+      id="contacto"
       className="py-5 px-3"
       style={{ background: "linear-gradient(135deg, #5f3dc4, #4431a1)" }}
     >
