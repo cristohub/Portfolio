@@ -25,10 +25,10 @@ export const projects: Project[] = [
     link: "https://psicologia-forense.com"
   },
    {
-    titulo: "Camper Box",
+    titulo: "Portafolio",
     descripcion: "Diseño web e identidad de marca",
-    imagen: "/assets/img/camper.jpg",
-    link: "https://psicologia-forense.com"
+     imagen: "/assets/images/projects/Critofer-Sani.png",
+    link: "https://cristofersani.vercel.app/"
   },
    {
     titulo: "Camper Box",
