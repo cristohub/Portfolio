@@ -32,6 +32,7 @@ const ProyectosSlider: React.FC = () => {
               titulo={project.titulo}
               descripcion={project.descripcion}
               imagen={project.imagen}
+              link={project.link}
             />
           </div>
         ))}
