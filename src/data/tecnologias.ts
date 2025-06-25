@@ -13,51 +13,55 @@ export const categoriasTecnologias: CategoriaTecnologia[] = [
     titulo: "Lenguajes de programación",
     tecnologias: [
       { nombre: "C#", icono: "/assets/images/skills/languages/csharp.png" },
-      { nombre: "JavaScript", icono: "/icons/javascript.png" },
-      { nombre: "Java", icono: "/icons/java.png" },
-      { nombre: "Python", icono: "/icons/python.png" },
+      { nombre: "JavaScript", icono: "/assets/images/skills/languages/csharp.png" },
+      { nombre: "Java", icono: "/assets/images/skills/languages/csharp.png" },
+      { nombre: "Python", icono: "/assets/images/skills/languages/csharp.png" },
     ],
   },
   {
     titulo: "Tecnologías web",
     tecnologias: [
-      { nombre: "HTML", icono: "/icons/html.png" },
-      { nombre: "CSS", icono: "/icons/css.png" },
+      { nombre: "HTML", icono: "/assets/images/skills/languages/csharp.png" },
+      { nombre: "CSS", icono: "/assets/images/skills/languages/csharp.png" },
     ],
   },
   {
     titulo: "Frameworks y librerías",
     tecnologias: [
-      { nombre: "Angular", icono: "/icons/angular.png" },
-      { nombre: "ASP.NET", icono: "/icons/aspnet.png" },
-      { nombre: "Django", icono: "/icons/django.png" },
-      { nombre: "Ionic", icono: "/icons/ionic.png" },
-      { nombre: "Bootstrap", icono: "/icons/bootstrap.png" },
-      { nombre: "React", icono: "/icons/react.png" },
+      { nombre: "Angular", icono: "/assets/images/skills/languages/csharp.png" },
+      { nombre: "ASP.NET", icono: "/assets/images/skills/languages/csharp.png" },
+      { nombre: "Django", icono: "/assets/images/skills/languages/csharp.png" },
+      { nombre: "Ionic", icono: "/assets/images/skills/languages/csharp.png" },
+      { nombre: "Bootstrap", icono: "/assets/images/skills/languages/csharp.png" },
+      { nombre: "React", icono: "/assets/images/skills/languages/csharp.png" },
     ],
   },
   {
     titulo: "Bases de datos",
     tecnologias: [
-      { nombre: "MySQL", icono: "/icons/mysql.png" },
-      { nombre: "Oracle", icono: "/icons/oracle.png" },
-      { nombre: "SQL Server", icono: "/icons/sqlserver.png" },
-      { nombre: "SQLite3", icono: "/icons/sqlite.png" },
+      { nombre: "MySQL", icono: "/assets/images/skills/languages/csharp.png" },
+      { nombre: "Oracle", icono: "/assets/images/skills/languages/csharp.png" },
+      { nombre: "SQL Server", icono: "/assets/images/skills/languages/csharp.png" },
+      { nombre: "SQLite3", icono: "/assets/images/skills/languages/csharp.png" },
     ],
   },
   {
     titulo: "Diseño y prototipado",
-    tecnologias: [{ nombre: "Figma", icono: "/icons/figma.png" }],
+    tecnologias: [
+      { nombre: "Figma", icono: "/assets/images/skills/languages/csharp.png" },
+    ],
   },
   {
     titulo: "CMS",
-    tecnologias: [{ nombre: "WordPress", icono: "/icons/wordpress.png" }],
+    tecnologias: [
+      { nombre: "WordPress", icono: "/assets/images/skills/languages/csharp.png" },
+    ],
   },
   {
     titulo: "Control de versiones",
     tecnologias: [
-      { nombre: "Git", icono: "/icons/git.png" },
-      { nombre: "GitHub", icono: "/icons/github.png" },
+      { nombre: "Git", icono: "/assets/images/skills/languages/csharp.png" },
+      { nombre: "GitHub", icono: "/assets/images/skills/languages/csharp.png" },
     ],
   },
 ];
