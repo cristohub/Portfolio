@@ -16,7 +16,7 @@ const Tecnologias: React.FC = () => {
             <motion.div
               key={categoria.titulo}
               layoutId={`card-${categoria.titulo}`}
-              className="col-12 col-sm-6 col-md-4 col-lg-3"
+              className="col-6 col-md-4 col-lg-3" // <-- Aquí está el cambio
               style={{ cursor: "pointer" }}
               onClick={() => setSelected(categoria.titulo)}
             >
