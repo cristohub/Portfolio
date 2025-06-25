@@ -1,5 +1,6 @@
 import React from "react";
-import { motion, Variants } from "framer-motion";
+import { motion } from "framer-motion";
+import type { Variants } from "framer-motion";
 import EstadoTrabajo from "./EstadoTrabajo";
 import cristoferImg from "../assets/images/cristofer-sani.png";
 
@@ -58,7 +59,7 @@ const Hero: React.FC = () => {
           </motion.div>
 
           {/* Contenido */}
-          <motion.div className="col-12 col-md-4 " variants={textVariants}>
+          <motion.div className="col-12 col-md-4" variants={textVariants}>
             <div className="mt-4">
               <EstadoTrabajo />
             </div>
@@ -95,7 +96,7 @@ const Hero: React.FC = () => {
             <motion.hr className="my-4 w-50" variants={textVariants} />
 
             <motion.div
-              className="d-flex gap-4 align-items-center fs-3 "
+              className="d-flex gap-4 align-items-center fs-3"
               variants={textVariants}
             >
               <a
