@@ -9,9 +9,10 @@ import Hero from "../components/Hero";
 const Home: React.FC = () => {
   return (
     <>
-      <Hero />
-
-      <Acerca />
+      <section style={{ borderRadius: "0 0 34px 34px", background: "" }}>
+        <Hero />
+        <Acerca />
+      </section>
 
       <section>
         <CallToAction

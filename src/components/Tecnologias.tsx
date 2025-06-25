@@ -7,20 +7,23 @@ const Tecnologias: React.FC = () => {
   const [selected, setSelected] = useState<string | null>(null);
 
   return (
-    <article className="bg-light py-5">
+    <article className=" py-5">
       <div className="container position-relative">
-        <h2 className="fw-bold mb-5 text-center">Habilidades Técnicas</h2>
+        <h2 className="fw-bold mb-5 ">Habilidades Técnicas</h2>
 
         <div className="row g-4 justify-content-center">
           {categoriasTecnologias.map((categoria) => (
             <motion.div
               key={categoria.titulo}
               layoutId={`card-${categoria.titulo}`}
-              className="col-6 col-md-4 col-lg-3" // <-- Aquí está el cambio
+              className="col-6 col-md-4 col-lg-3"
               style={{ cursor: "pointer" }}
               onClick={() => setSelected(categoria.titulo)}
             >
-              <div className="bg-white p-4 rounded shadow h-100 d-flex align-items-center justify-content-center">
+              <div
+                className="bg-white p-4  shadow h-100 d-flex align-items-center justify-content-center"
+                style={{ borderRadius: "34px" }}
+              >
                 <h4 className="fw-semibold text-center mb-0">
                   {categoria.titulo}
                 </h4>
@@ -70,7 +73,7 @@ const Tecnologias: React.FC = () => {
                   className="btn btn-danger mb-3"
                   onClick={() => setSelected(null)}
                 >
-                  Cerrar
+                  X
                 </button>
 
                 <h3 className="mb-4 text-center">{selected}</h3>

@@ -90,7 +90,9 @@ const ContactSection: React.FC = () => {
     <section
       id="contacto"
       className="py-5 px-3"
-      style={{ background: "linear-gradient(135deg, #5f3dc4, #4431a1)" }}
+      style={{
+        background: "linear-gradient(135deg,rgb(96, 44, 255),rgb(38, 26, 97))",
+      }}
     >
       <div className="container">
         <div className="row align-items-center text-white">

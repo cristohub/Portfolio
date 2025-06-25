@@ -61,7 +61,7 @@ const Header: React.FC = () => {
           </button>
 
           {/* Menú escritorio centrado */}
-          <div className="d-none d-lg-flex flex-grow-1 justify-content-center">
+          <div className="d-none d-lg-flex flex-grow-1 justify-content-end">
             <ul className="navbar-nav">
               {navLinks.map((link) => (
                 <NavItem key={link.href} {...link} />
@@ -96,9 +96,10 @@ const Header: React.FC = () => {
         }
 
         .custom-navbar {
-          background: rgba(0, 0, 0, 0.7);
+          background: rgb(0, 0, 0);
           backdrop-filter: blur(8px);
           border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 0 0 34px 34px
         }
 
         .navbar-nav .nav-link {
@@ -108,7 +109,7 @@ const Header: React.FC = () => {
         }
 
         .navbar-nav .nav-link:hover {
-          color: #0dcaf0;
+          color:rgb(221, 118, 50);
         }
 
         .hide-header {

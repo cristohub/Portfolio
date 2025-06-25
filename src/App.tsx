@@ -10,7 +10,7 @@ const App: React.FC = () => {
   return (
     <div className="d-flex flex-column min-vh-100">
       <Header />
-      <main className=" mt-4 flex-grow-1">
+      <main className=" mt-4 flex-grow-1 ">
         <Home />
       </main>
       <Footer />
