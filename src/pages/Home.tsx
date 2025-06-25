@@ -4,6 +4,7 @@ import cristoferImg from "../assets/images/cristofer-sani.png";
 import CallToAction from "../components/CallToAction";
 import ContactSection from "../components/ContactSection";
 import SliderProjects from "../components/SliderProjects";
+import Acerca from "../components/Acerca";
 
 const Home: React.FC = () => {
   return (
@@ -88,6 +89,8 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <Acerca />
 
       <section>
         <CallToAction
