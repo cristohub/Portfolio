@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { motion, useAnimation, useMotionValue } from "framer-motion";
+import { motion, useMotionValue } from "framer-motion";
 import { categoriasTecnologias } from "../data/tecnologias";
 import BotonTecnologia from "./BotonTecnologia";
 
@@ -8,26 +8,23 @@ const Tecnologias: React.FC = () => {
   const listaRepetida = Array(10).fill(tecnologias).flat();
 
   const x = useMotionValue(0);
-  const controls = useAnimation();
   const isDragging = useRef(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Velocidad del scroll automático (pixeles por frame)
   const velocidad = 1;
 
-  // Función para animar el scroll de manera infinita
   useEffect(() => {
     let animationFrameId: number;
 
     const animar = () => {
       if (!isDragging.current) {
         const anchoContenedor = containerRef.current?.scrollWidth || 0;
-        const anchoVisible = containerRef.current?.offsetWidth || 0;
-        const maxDesplazamiento = -(anchoContenedor / 2); // Al ser contenido repetido, el reset es a la mitad
+        // Eliminamos anchoVisible porque no se usa
+        const maxDesplazamiento = -(anchoContenedor / 2); // Reset cuando pasa la mitad
 
         let nuevoX = x.get() - velocidad;
 
-        // Resetear cuando pasa la mitad del contenido (para efecto loop)
         if (nuevoX <= maxDesplazamiento) {
           nuevoX = 0;
         }
