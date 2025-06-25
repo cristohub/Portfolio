@@ -28,7 +28,7 @@ export const projects: Project[] = [
     titulo: "Portafolio",
     descripcion: "Diseño web e identidad de marca",
      imagen: "/assets/images/projects/Critofer-Sani.png",
-    link: "https://cristofersani.vercel.app/"
+    link: "https://cristofersani.vercel.app"
   },
    {
     titulo: "Camper Box",

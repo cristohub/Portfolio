@@ -8,7 +8,7 @@ import SliderProjects from "../components/SliderProjects";
 const Home: React.FC = () => {
   return (
     <>
-      <section id="inicio">
+      <section id="inicio" className=" py-5">
         <div className="container-fluid">
           {" "}
           {/* Aquí el contenedor */}
@@ -42,7 +42,7 @@ const Home: React.FC = () => {
 
               <div className="mt-4  d-flex align-items-center gap-2 fw-semibold">
                 <a
-                  href="/cv.pdf"
+                  href="https://drive.google.com/file/d/1NU1cn8mE2Sem37C2bEC05xvl3yGytzLQ/view?usp=sharing"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-danger text-light d-inline-flex align-items-center gap-2"
@@ -54,20 +54,34 @@ const Home: React.FC = () => {
 
               <hr className="my-4 w-50" />
 
-              <div className="d-flex gap-4 fs-3">
+              <div className="d-flex gap-4 align-items-center fs-3">
                 <a
                   href="https://linkedin.com/in/tuusuario"
                   target="_blank"
-                  className="text-primary"
+                  className="text-primary d-flex align-items-center"
+                  style={{ width: "30px", height: "30px" }}
                 >
-                  <i className="bi bi-linkedin"></i>
+                  <i
+                    className="bi bi-linkedin"
+                    style={{ fontSize: "30px" }}
+                  ></i>
                 </a>
+
                 <a
-                  href="https://github.com/tuusuario"
+                  href="mailto:tuemail@gmail.com"
                   target="_blank"
-                  className="text-dark"
+                  className="d-flex align-items-center"
+                  style={{ width: "30px", height: "30px" }}
                 >
-                  <i className="bi bi-github"></i>
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png"
+                    alt="Gmail"
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "contain",
+                    }}
+                  />
                 </a>
               </div>
             </div>

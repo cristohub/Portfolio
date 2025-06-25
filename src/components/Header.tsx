@@ -44,8 +44,11 @@ const Header: React.FC = () => {
         style={{ transition: "transform 0.4s ease" }}
       >
         <nav className="navbar navbar-expand-lg px-4 custom-navbar">
-          <a className="navbar-brand fw-bold fs-4 text-white" href="#inicio">
-            Cristofer Sani
+          <a
+            className=" bg-dark rounded-3 navbar-brand fw-bold fs-4 text-white d-flex align-items-center"
+            href="#inicio"
+          >
+            <img src="/Logo.png" alt="Logo" style={{ height: "60px" }} />
           </a>
 
           <button
@@ -144,7 +147,13 @@ const Header: React.FC = () => {
           cursor: pointer;
         }
 
-    
+        .navbar-toggler {
+          border: none; 
+        }
+
+        .navbar-toggler-icon {
+          filter: invert(1);
+        }
 
         @media (min-width: 992px) {
           .sidebar-menu {
@@ -155,6 +164,7 @@ const Header: React.FC = () => {
             display: none;
           }
           */
+
         }
       `}</style>
     </>
