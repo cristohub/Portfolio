@@ -4,12 +4,15 @@ import type { Variants } from "framer-motion";
 import EstadoTrabajo from "./EstadoTrabajo";
 import cristoferImg from "../assets/images/cristofer-sani.png";
 
+// Detectar si estamos en móvil
+const isMobile = window.innerWidth <= 768;
+
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      duration: 0.2, // fade rápido
+      duration: 0.2,
       when: "beforeChildren",
       staggerChildren: 0.2,
     },
@@ -38,7 +41,7 @@ const Hero: React.FC = () => {
   return (
     <motion.section
       id="inicio"
-      className="py-5"
+      className=""
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -54,7 +57,11 @@ const Hero: React.FC = () => {
               src={cristoferImg}
               alt="Cristofer Sani"
               className="img-fluid rounded"
-              style={{ maxWidth: "100%", height: "auto", objectFit: "cover" }}
+              style={{
+                maxWidth: isMobile ? "60%" : "100%",
+                height: "auto",
+                objectFit: "cover",
+              }}
             />
           </motion.div>
 

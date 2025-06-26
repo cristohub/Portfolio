@@ -20,15 +20,15 @@ const Header: React.FC = () => {
         {" "}
         <nav className="navbar navbar-expand-lg px-4 custom-navbar">
           <a className="golden-badge navbar-brand fw-bold fs-4 text-white d-flex align-items-center px-3 py-2">
-            <img src="/Logo.png" alt="Logo" style={{ height: "60px" }} />
+            <img src="/Logo.png" alt="Logo" style={{ height: "40px" }} />
           </a>
 
           <style>{`
             .golden-badge {
-              background: linear-gradient(135deg,rgb(0, 0, 0),rgb(7, 7, 6));
-              border-radius: 12px;
-              box-shadow: 0 4px 12px rgba(255, 196, 0, 0.4);
-              border: 1px solid rgba(255, 255, 255, 0.2);
+              
+              border-radius: 10px;
+            
+              border: 2px solid rgba(255, 255, 255, 0.59);
              
             }
 
