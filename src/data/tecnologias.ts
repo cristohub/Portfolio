@@ -30,9 +30,9 @@ export const categoriasTecnologias: CategoriaTecnologia[] = [
     tecnologias: [
       { nombre: "Angular", icono: "/assets/images/skills/frameworks/angular.png" },
       { nombre: "ASP.NET", icono: "/assets/images/skills/frameworks/net.png" },
-      { nombre: "Django", icono: "/assets/images/skills/frameworks/csharp.png" },
-      { nombre: "Ionic", icono: "/assets/images/skills/frameworks/csharp.png" },
-      { nombre: "Bootstrap", icono: "/assets/images/skills/frameworks/csharp.png" },
+      { nombre: "Django", icono: "/assets/images/skills/frameworks/django.png" },
+      { nombre: "Ionic", icono: "/assets/images/skills/frameworks/ionic.png" },
+      { nombre: "Bootstrap", icono: "/assets/images/skills/frameworks/bootstrap.png" },
       { nombre: "React", icono: "/assets/images/skills/frameworks/react.png" },
     ],
   },
@@ -40,9 +40,9 @@ export const categoriasTecnologias: CategoriaTecnologia[] = [
     titulo: "Bases de datos",
     tecnologias: [
       { nombre: "MySQL", icono: "/assets/images/skills/databases/mysql.png" },
-      { nombre: "Oracle", icono: "/assets/images/skills/databases/csharp.png" },
-      { nombre: "SQL Server", icono: "/assets/images/skills/databases/csharp.png" },
-      { nombre: "SQLite3", icono: "/assets/images/skills/databases/csharp.png" },
+      { nombre: "Oracle", icono: "/assets/images/skills/databases/oracle.png" },
+      { nombre: "SQL Server", icono: "/assets/images/skills/databases/SqlServer.png" },
+      { nombre: "SQLite3", icono: "/assets/images/skills/databases/SqlLite.png" },
     ],
   },
   {
@@ -60,8 +60,8 @@ export const categoriasTecnologias: CategoriaTecnologia[] = [
   {
     titulo: "Control de versiones",
     tecnologias: [
-      { nombre: "Git", icono: "/assets/images/skills/languages/csharp.png" },
-      { nombre: "GitHub", icono: "/assets/images/skills/languages/csharp.png" },
+      { nombre: "Git", icono: "/assets/images/skills/versiones/git.png" },
+      { nombre: "GitHub", icono: "/assets/images/skills/versiones/github.png" },
     ],
   },
 ];
