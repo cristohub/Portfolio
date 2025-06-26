@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NavItem from "./NavItem";
 import { navLinks } from "../data/navLinks";
-import { motion } from "framer-motion";
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
