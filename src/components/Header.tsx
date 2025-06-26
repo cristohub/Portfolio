@@ -76,7 +76,7 @@ const Header: React.FC = () => {
         }
 
         .custom-navbar {
-          background: rgb(9, 50, 110);
+          background: #004aad;
           backdrop-filter: blur(8px);
           border-bottom: 1px solid rgba(255, 255, 255, 0.1);
           
