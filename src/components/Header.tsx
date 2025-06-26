@@ -1,30 +1,10 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import NavItem from "./NavItem";
 import { navLinks } from "../data/navLinks";
+import { motion } from "framer-motion";
 
 const Header: React.FC = () => {
-  const [showHeader, setShowHeader] = useState(true);
-  const lastScrollY = useRef(0);
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    let ticking = false;
-
-    const handleScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(() => {
-          const currentY = window.scrollY;
-          setShowHeader(currentY < lastScrollY.current || currentY < 10);
-          lastScrollY.current = currentY;
-          ticking = false;
-        });
-        ticking = true;
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   // Bloquear scroll al abrir menú
   useEffect(() => {
@@ -37,19 +17,24 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header
-        className={`position-fixed top-0 start-0 end-0 z-3 ${
-          showHeader ? "show-header" : "hide-header"
-        }`}
-        style={{ transition: "transform 0.4s ease" }}
-      >
+      <header className="z-3">
+        {" "}
         <nav className="navbar navbar-expand-lg px-4 custom-navbar">
-          <a
-            className=" bg-dark rounded-3 navbar-brand fw-bold fs-4 text-white d-flex align-items-center"
-            href="#inicio"
-          >
+          <a className="golden-badge navbar-brand fw-bold fs-4 text-white d-flex align-items-center px-3 py-2">
             <img src="/Logo.png" alt="Logo" style={{ height: "60px" }} />
           </a>
+
+          <style>{`
+            .golden-badge {
+              background: linear-gradient(135deg,rgb(0, 0, 0),rgb(7, 7, 6));
+              border-radius: 12px;
+              box-shadow: 0 4px 12px rgba(255, 196, 0, 0.4);
+              border: 1px solid rgba(255, 255, 255, 0.2);
+             
+            }
+
+           
+          `}</style>
 
           <button
             className="navbar-toggler"
@@ -60,7 +45,6 @@ const Header: React.FC = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          {/* Menú escritorio centrado */}
           <div className="d-none d-lg-flex flex-grow-1 justify-content-end">
             <ul className="navbar-nav">
               {navLinks.map((link) => (
@@ -69,7 +53,6 @@ const Header: React.FC = () => {
             </ul>
           </div>
         </nav>
-
         {/* Sidebar móvil/tablet */}
         <div className={`sidebar-menu ${menuOpen ? "open" : ""}`}>
           <button className="close-btn" onClick={() => setMenuOpen(false)}>
@@ -87,8 +70,6 @@ const Header: React.FC = () => {
         </div>
       </header>
 
-      {/* Aquí se elimina el overlay */}
-
       <style>{`
         body.no-scroll {
           overflow: hidden;
@@ -96,10 +77,10 @@ const Header: React.FC = () => {
         }
 
         .custom-navbar {
-          background: rgb(0, 0, 0);
+          background: rgb(9, 50, 110);
           backdrop-filter: blur(8px);
           border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-          border-radius: 0 0 34px 34px
+          
         }
 
         .navbar-nav .nav-link {
@@ -109,15 +90,7 @@ const Header: React.FC = () => {
         }
 
         .navbar-nav .nav-link:hover {
-          color:rgb(221, 118, 50);
-        }
-
-        .hide-header {
-          transform: translateY(-100%);
-        }
-
-        .show-header {
-          transform: translateY(0);
+          color: rgb(221, 118, 50);
         }
 
         .sidebar-menu {
@@ -149,7 +122,7 @@ const Header: React.FC = () => {
         }
 
         .navbar-toggler {
-          border: none; 
+          border: none;
         }
 
         .navbar-toggler-icon {
@@ -160,12 +133,6 @@ const Header: React.FC = () => {
           .sidebar-menu {
             display: none;
           }
-          /*
-          .overlay {
-            display: none;
-          }
-          */
-
         }
       `}</style>
     </>

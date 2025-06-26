@@ -20,7 +20,6 @@ const Tecnologias: React.FC = () => {
     const animar = () => {
       if (!isDragging.current) {
         const anchoContenedor = containerRef.current?.scrollWidth || 0;
-        // Eliminamos anchoVisible porque no se usa
         const maxDesplazamiento = -(anchoContenedor / 2); // Reset cuando pasa la mitad
 
         let nuevoX = x.get() - velocidad;
@@ -48,26 +47,56 @@ const Tecnologias: React.FC = () => {
   };
 
   return (
-    <section className="py-5 bg-light">
-      <div className="container text-center">
+    <section className="py-5">
+      <div>
         <h2 className="fw-bold mb-5">Habilidades Técnicas</h2>
 
         <div
           ref={containerRef}
-          className="overflow-hidden"
+          className="tecnologias-container"
           style={{
             width: "100%",
-            position: "relative",
             height: "80px",
             cursor: isDragging.current ? "grabbing" : "grab",
+            position: "relative",
+            overflow: "hidden",
           }}
         >
+          {/* Degradados laterales para disimular el corte */}
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "80px",
+              height: "100%",
+              pointerEvents: "none",
+              background:
+                "linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%)",
+              zIndex: 2,
+            }}
+          />
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              right: 0,
+              width: "80px",
+              height: "100%",
+              pointerEvents: "none",
+              background:
+                "linear-gradient(to left, white 0%, rgba(255,255,255,0) 100%)",
+              zIndex: 2,
+            }}
+          />
+
           <motion.div
             className="d-flex gap-4 align-items-center"
             style={{
               whiteSpace: "nowrap",
               display: "inline-flex",
               x,
+              height: "80px",
             }}
             drag="x"
             dragConstraints={{ left: -Infinity, right: 0 }}
