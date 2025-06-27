@@ -3,10 +3,7 @@ import FooterItem from "./FooterItem";
 import { footerLinks } from "../data/footerLinks";
 
 const Footer: React.FC = () => (
-  <footer
-    className="bg-dark text-white py-4 mt-auto"
-    style={{ borderRadius: "34px 34px 0 0" }}
-  >
+  <footer className="bg-dark text-white py-4 mt-auto" style={{}}>
     <div className="container">
       <div className="row">
         {footerLinks.map((group, index) => (

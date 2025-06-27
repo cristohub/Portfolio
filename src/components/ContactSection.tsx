@@ -92,6 +92,7 @@ const ContactSection: React.FC = () => {
       className="py-5 px-3"
       style={{
         background: "linear-gradient(135deg,rgb(96, 44, 255),rgb(38, 26, 97))",
+        borderRadius: "34px 34px 0 0 ",
       }}
     >
       <div className="container">
@@ -134,7 +135,7 @@ const ContactSection: React.FC = () => {
           {/* Derecha - Formulario */}
           <div
             className="col-md-6 bg-white text-dark p-4 shadow"
-            style={{ borderRadius: "34px" }}
+            style={{ borderRadius: "24px" }}
           >
             <form onSubmit={handleSubmit}>
               <div className="mb-3">

@@ -18,3 +18,20 @@
   transform: scale(1.05);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  padding: 0 1rem; /* un poco de padding horizontal para que no pegue a los bordes */
+  box-sizing: border-box;
+}

@@ -3,7 +3,7 @@ import React from "react";
 import CallToAction from "../components/CallToAction";
 import ContactSection from "../components/ContactSection";
 import SliderProjects from "../components/SliderProjects";
-import Acerca from "../components/Acerca";
+
 import Hero from "../components/Hero";
 
 const Home: React.FC = () => {
@@ -11,7 +11,6 @@ const Home: React.FC = () => {
     <>
       <section style={{ borderRadius: "0 0 34px 34px", background: "" }}>
         <Hero />
-        <Acerca />
       </section>
 
       <section>

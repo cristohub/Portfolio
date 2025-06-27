@@ -7,9 +7,8 @@ export const footerLinks: FooterLink[] = [
   {
     title: "Menú",
     links: [
-      { name: "Inicio", url: "#" },
-      { name: "Acerca de mi", url: "#" },
-      { name: "Proyectos", url: "#" },
+      { name: "Inicio", url: "#inicio" },
+      { name: "Proyectos", url: "#porta" },
     ],
   },
   {
@@ -20,11 +19,5 @@ export const footerLinks: FooterLink[] = [
       
     ],
   },
-  {
-    title: "Legal",
-    links: [
-      { name: "Aviso legal", url: "#" },
-      { name: "Política de privacidad", url: "#" },
-    ],
-  },
+ 
 ];

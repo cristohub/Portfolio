@@ -17,7 +17,10 @@ const CallToAction: React.FC<CallToActionProps> = ({
   enlaceBoton,
 }) => {
   return (
-    <section className="py-5" style={{ backgroundColor: "#a6eeff" }}>
+    <section
+      className="py-5"
+      style={{ backgroundColor: "#a6eeff", borderRadius: "34px" }}
+    >
       <div className="container">
         <div className="row align-items-center">
           {/* Imagen */}

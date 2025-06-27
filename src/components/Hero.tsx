@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import EstadoTrabajo from "./EstadoTrabajo";
 import cristoferImg from "../assets/images/cristofer-sani.png";
-
+import Acerca from "../components/Acerca";
 // Detectar si estamos en móvil
 const isMobile = window.innerWidth <= 768;
 
@@ -73,7 +73,7 @@ const Hero: React.FC = () => {
 
             <motion.h1
               className="text-danger fw-bold"
-              style={{ fontSize: "clamp(2rem, 5vw, 3rem)" }}
+              style={{ fontSize: "clamp(1rem, 2vw, 3rem)" }}
               variants={textVariants}
             >
               Hola, Soy Cristofer Sani
@@ -166,6 +166,8 @@ const Hero: React.FC = () => {
           </motion.div>
         </div>
       </div>
+
+      <Acerca />
     </motion.section>
   );
 };
