@@ -4,8 +4,6 @@ import type { Variants } from "framer-motion";
 import EstadoTrabajo from "./EstadoTrabajo";
 import cristoferImg from "../assets/images/cristofer-sani.png";
 import Acerca from "../components/Acerca";
-// Detectar si estamos en móvil
-const isMobile = window.innerWidth <= 768;
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -38,10 +36,12 @@ const imageVariants: Variants = {
 };
 
 const Hero: React.FC = () => {
+  // Mejor detectar tamaño dinámicamente (puedes usar un hook useState + useEffect para hacerlo reactivo)
+  const isMobile = window.innerWidth <= 768;
+
   return (
     <motion.section
       id="inicio"
-      className=""
       variants={containerVariants}
       initial="hidden"
       animate="visible"
@@ -73,7 +73,10 @@ const Hero: React.FC = () => {
 
             <motion.h1
               className="text-danger fw-bold"
-              style={{ fontSize: "clamp(1rem, 2vw, 3rem)" }}
+              style={{
+                fontSize: isMobile ? "1.5rem" : "clamp(1.5rem, 2vw, 3rem)",
+                lineHeight: 1.2,
+              }}
               variants={textVariants}
             >
               Hola, Soy Cristofer Sani
@@ -81,13 +84,16 @@ const Hero: React.FC = () => {
 
             <motion.h1
               className="fw-bolder text-dark"
-              style={{ fontSize: "clamp(3rem, 7vw, 5rem)" }}
+              style={{
+                fontSize: isMobile ? "2.5rem" : "clamp(3rem, 7vw, 5rem)",
+                lineHeight: 1.1,
+              }}
               variants={textVariants}
             >
               Desarrollador De Aplicaciones Web
             </motion.h1>
 
-            <motion.div className=" text-center">
+            <motion.div className="text-center">
               <img
                 src="/arrow.png"
                 alt="Cristofer Sani"
@@ -101,7 +107,7 @@ const Hero: React.FC = () => {
             </motion.div>
 
             <motion.div
-              className="mt-4 d-flex "
+              className="mt-4 d-flex"
               style={{ marginLeft: "50px" }}
               variants={textVariants}
             >
