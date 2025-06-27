@@ -8,7 +8,7 @@ const EstadoTrabajo = () => {
               box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
             }
             70% {
-              box-shadow: 0 0 0 8px rgba(40, 167, 69, 0);
+              box-shadow: 0 0 0 12px rgba(40, 167, 69, 0);
             }
             100% {
               box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
@@ -16,16 +16,19 @@ const EstadoTrabajo = () => {
           }
 
           .pulse {
-            animation: pulse 1.5s infinite;
+            animation: pulse 2s infinite;
           }
         `}
       </style>
 
-      <div className="d-inline-flex align-items-center bg-light px-3 py-1 rounded-pill text-muted mb-3">
-        <span className="me-2">Abierto Al Trabajo</span>
+      <div
+        className="d-inline-flex align-items-center bg-light px-4 py-2 rounded-pill fw-bold shadow-sm mb-3"
+        style={{ color: "black" }}
+      >
+        <span className="me-3">Abierto Al Trabajo</span>
         <span
           className="bg-success rounded-circle pulse"
-          style={{ width: "8px", height: "8px" }}
+          style={{ width: "14px", height: "14px" }}
         ></span>
       </div>
     </>

@@ -66,24 +66,26 @@ const Hero: React.FC = () => {
           </motion.div>
 
           {/* Contenido */}
-          <motion.div className="col-12 col-md-4" variants={textVariants}>
+          <motion.div className="col-12 col-md-5" variants={textVariants}>
             <div className="mt-4">
               <EstadoTrabajo />
             </div>
 
             <motion.h1
-              className="text-danger fw-bold fs-4"
+              className="text-danger fw-bold"
+              style={{ fontSize: "clamp(2rem, 5vw, 3rem)" }}
               variants={textVariants}
             >
               Hola, Soy Cristofer Sani
             </motion.h1>
 
-            <motion.h2
-              className="fs-2 fw-bolder text-dark"
+            <motion.h1
+              className="fw-bolder text-dark"
+              style={{ fontSize: "clamp(3rem, 7vw, 5rem)" }}
               variants={textVariants}
             >
               Desarrollador De Aplicaciones Web
-            </motion.h2>
+            </motion.h1>
 
             <motion.div className=" text-center">
               <img
