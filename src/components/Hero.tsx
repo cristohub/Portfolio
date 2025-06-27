@@ -85,15 +85,42 @@ const Hero: React.FC = () => {
               Desarrollador De Aplicaciones Web
             </motion.h2>
 
+            <motion.div className=" text-center">
+              <img
+                src="/arrow.png"
+                alt="Cristofer Sani"
+                className="img-fluid rounded"
+                style={{
+                  maxWidth: isMobile ? "20%" : "30%",
+                  height: "auto",
+                  objectFit: "cover",
+                }}
+              />
+            </motion.div>
+
             <motion.div
-              className="mt-4 d-inline-flex align-items-center gap-2 fw-semibold"
+              className="mt-4 d-flex "
+              style={{ marginLeft: "50px" }}
               variants={textVariants}
             >
               <a
                 href="https://drive.google.com/file/d/1NU1cn8mE2Sem37C2bEC05xvl3yGytzLQ/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-danger text-light d-inline-flex align-items-center gap-2"
+                className="btn btn-danger text-light d-flex align-items-center gap-2 px-4 py-2 rounded-pill shadow"
+                style={{
+                  fontWeight: 600,
+                  transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "scale(1.05)";
+                  e.currentTarget.style.boxShadow =
+                    "0 4px 12px rgba(0, 0, 0, 0.2)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "scale(1)";
+                  e.currentTarget.style.boxShadow = "0 0 0 transparent";
+                }}
               >
                 <i className="bi bi-box-arrow-up-right"></i>
                 Ver CV
