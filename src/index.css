@@ -40,3 +40,14 @@ html, body {
   padding: 0 1rem; /* un poco de padding horizontal para que no pegue a los bordes */
   box-sizing: border-box;
 }
+
+
+.icon-hover {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+.icon-hover:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}

@@ -145,8 +145,7 @@ const Hero: React.FC = () => {
                 href="https://linkedin.com/in/tuusuario"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary d-flex align-items-center"
-                style={{ width: "30px", height: "30px" }}
+                className="icon-hover text-primary d-flex align-items-center"
               >
                 <i className="bi bi-linkedin" style={{ fontSize: "30px" }}></i>
               </a>
@@ -155,8 +154,7 @@ const Hero: React.FC = () => {
                 href="mailto:tuemail@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="d-flex align-items-center"
-                style={{ width: "30px", height: "30px" }}
+                className="icon-hover d-flex align-items-center"
               >
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png"
@@ -167,6 +165,22 @@ const Hero: React.FC = () => {
                     objectFit: "contain",
                   }}
                 />
+              </a>
+
+              <a
+                href="tel:+34691010409"
+                className="icon-hover d-flex align-items-center"
+                style={{ color: "green" }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="100%"
+                  height="100%"
+                  fill="currentColor"
+                >
+                  <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.05-.24 11.72 11.72 0 003.68.59 1 1 0 011 1v3.5a1 1 0 01-1 1A16 16 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 11.72 11.72 0 00.59 3.68 1 1 0 01-.24 1.05l-2.23 2.06z" />
+                </svg>
               </a>
             </motion.div>
           </motion.div>
