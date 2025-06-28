@@ -82,11 +82,12 @@ const Hero: React.FC = () => {
               Hola, Soy Cristofer Sani
             </motion.h1>
 
-            <motion.h1
+            <motion.h2
               className="fw-bolder text-dark"
               style={{
-                fontSize: isMobile ? "2.5rem" : "clamp(3rem, 7vw, 5rem)",
-                lineHeight: 1.1,
+                fontSize: isMobile ? "1.8rem" : "clamp(3rem, 7vw, 5rem)",
+                lineHeight: 1.2,
+                marginTop: "0.5rem",
               }}
               variants={textVariants}
             >
@@ -106,7 +107,7 @@ const Hero: React.FC = () => {
                   Web
                 </span>
               </span>
-            </motion.h1>
+            </motion.h2>
 
             <motion.div className="text-center">
               <img
