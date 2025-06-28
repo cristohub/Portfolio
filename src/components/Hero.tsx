@@ -142,7 +142,7 @@ const Hero: React.FC = () => {
               variants={textVariants}
             >
               <a
-                href="www.linkedin.com/in/cristofersani"
+                href="https://www.linkedin.com/in/cristofersani/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="icon-hover text-primary d-flex align-items-center"
