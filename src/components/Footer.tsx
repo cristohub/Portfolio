@@ -4,7 +4,7 @@ import { footerLinks } from "../data/footerLinks";
 
 const Footer: React.FC = () => {
   const scrollToTop = () => {
-    const target = document.getElementById("inicio");
+    const target = document.getElementById("headerTop");
     if (target) {
       target.scrollIntoView({ behavior: "smooth" });
     }

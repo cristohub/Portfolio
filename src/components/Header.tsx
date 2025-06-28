@@ -16,7 +16,7 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className="z-3">
+      <header className="z-3" id="headerTop">
         {" "}
         <nav className="navbar navbar-expand-lg px-4 custom-navbar">
           <a className="golden-badge navbar-brand fw-bold fs-4 text-white d-flex align-items-center px-3 py-2">
