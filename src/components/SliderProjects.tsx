@@ -5,7 +5,7 @@ import { projects } from "../data/projects";
 const ProyectosSlider: React.FC = () => {
   return (
     <section
-      className="mt-5 mb-5 bg-danger d-flex flex-column justify-content-center"
+      className="mt-5 mb-5  d-flex flex-column justify-content-center"
       id="porta"
       style={{ minHeight: "600px" }}
     >
