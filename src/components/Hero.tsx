@@ -90,7 +90,19 @@ const Hero: React.FC = () => {
               }}
               variants={textVariants}
             >
-              Desarrollador De Aplicaciones Web
+              Desarrollador De Aplicaciones{" "}
+              <span
+                style={{
+                  background: "linear-gradient(90deg, #6a00f4, #a300ff)",
+                  color: "white",
+                  padding: "0.2em 0.5em",
+                  borderRadius: "0.3em",
+                  boxShadow: "0 0.2em 0.5em rgba(0, 0, 0, 0.2)",
+                  display: "inline-block",
+                }}
+              >
+                Web
+              </span>
             </motion.h1>
 
             <motion.div className="text-center">
