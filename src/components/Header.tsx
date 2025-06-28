@@ -5,7 +5,6 @@ import { navLinks } from "../data/navLinks";
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Bloquear scroll al abrir menú
   useEffect(() => {
     if (menuOpen) {
       document.body.classList.add("no-scroll");
@@ -27,8 +26,7 @@ const Header: React.FC = () => {
             .golden-badge {
               
               border-radius: 10px;
-            
-              border: 2px solid rgba(255, 255, 255, 0.59);
+              
              
             }
 
