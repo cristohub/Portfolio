@@ -151,7 +151,7 @@ const Hero: React.FC = () => {
               </a>
 
               <a
-                href="mailto:tuemail@gmail.com"
+                href="mailto:cristofersani03@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="icon-hover d-flex align-items-center"
