@@ -51,3 +51,19 @@ html, body {
   transform: scale(1.2);
   filter: brightness(1.2);
 }
+
+
+
+
+
+@media (max-width: 450px) {
+  .btn-responsive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;          /* que ocupe todo el ancho */
+    padding: 0.75rem 1rem; /* menos padding para que no quede gigante */
+    font-size: 1rem;      /* tamaño más pequeño para móvil */
+    box-sizing: border-box; /* que el padding no aumente el ancho */
+  }
+}

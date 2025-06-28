@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import EstadoTrabajo from "./EstadoTrabajo";
 import cristoferImg from "../assets/images/cristofer-sani.png";
 import Acerca from "../components/Acerca";
 
+// Variants para animaciones framer-motion
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -35,9 +36,29 @@ const imageVariants: Variants = {
   },
 };
 
+// Hook custom para obtener tamaño de ventana en tiempo real
+function useWindowSize() {
+  const [size, setSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setSize({ width: window.innerWidth, height: window.innerHeight });
+    };
+    window.addEventListener("resize", handleResize);
+
+    // Limpieza del listener
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return size;
+}
+
 const Hero: React.FC = () => {
-  // Mejor detectar tamaño dinámicamente (puedes usar un hook useState + useEffect para hacerlo reactivo)
-  const isMobile = window.innerWidth <= 768;
+  const { width } = useWindowSize();
+  const isMobile = width <= 768;
 
   return (
     <motion.section
@@ -131,15 +152,16 @@ const Hero: React.FC = () => {
                 href="https://drive.google.com/file/d/1NU1cn8mE2Sem37C2bEC05xvl3yGytzLQ/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-danger text-light d-flex align-items-center gap-2 px-4 py-2 rounded-pill shadow"
+                className="btn btn-danger text-light d-flex align-items-center gap-2 px-5 py-3 rounded-pill shadow btn-responsive "
                 style={{
                   fontWeight: 600,
+                  fontSize: "1.25rem",
                   transition: "transform 0.3s ease, box-shadow 0.3s ease",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = "scale(1.05)";
+                  e.currentTarget.style.transform = "scale(1.1)"; // un poco más grande al hover
                   e.currentTarget.style.boxShadow =
-                    "0 4px 12px rgba(0, 0, 0, 0.2)";
+                    "0 6px 16px rgba(0, 0, 0, 0.25)";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = "scale(1)";
@@ -161,7 +183,7 @@ const Hero: React.FC = () => {
                 href="https://www.linkedin.com/in/cristofersani/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="icon-hover text-primary d-flex align-items-center"
+                className="icon-hover text-primary d-flex align-items-center "
               >
                 <i className="bi bi-linkedin" style={{ fontSize: "30px" }}></i>
               </a>
