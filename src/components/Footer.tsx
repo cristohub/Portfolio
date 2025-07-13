@@ -27,8 +27,7 @@ const Footer: React.FC = () => {
         </div>
         <hr className="border-light mt-4" />
         <p className="text-center mb-0">
-          {"\u00A9"} {new Date().getFullYear()} Cristofer Sani. Todos los
-          derechos reservados.
+          {"\u00A9"} {new Date().getFullYear()} Cristofer Sani.
         </p>
       </div>
     </footer>
