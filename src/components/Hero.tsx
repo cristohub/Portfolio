@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
               alt="Cristofer Sani"
               className="img-fluid rounded"
               style={{
-                maxWidth: isMobile ? "60%" : "100%",
+                maxWidth: isMobile ? "90%" : "100%",
                 height: "auto",
                 objectFit: "cover",
               }}
