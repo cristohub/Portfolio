@@ -7,39 +7,39 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    titulo: "Nuevo Amanecer",
+    descripcion: "Diseño y desarrollo web.",
+    imagen: "/assets/images/projects/nuevoamanecer.png",
+    link: "https://nuevoamanecermadrid.com/"
+  },
+  {
     titulo: "Psicología Forense",
-    descripcion: "Diseño web e identidad de marca",
+    descripcion: "Colaboración web.",
     imagen: "/assets/images/projects/Paloma-R.png",
     link: "https://www.psicologialegalforense.com/"
   },
   {
-    titulo: "Autocares y Microbuses HBV ",
-    descripcion: "Identidad de marca",
-     imagen: "/assets/images/projects/Autocares.png",
-     link: "https://www.autocares-hbv.com/"
+    titulo: "Autocares HBV",
+    descripcion: "Clonación del sitio web.",
+    imagen: "/assets/images/projects/Autocares.png",
+    link: "https://www.autocares-hbv.com/"
   },
   {
     titulo: "DepaUni",
-    descripcion: "Diseño web e identidad de marca",
+    descripcion: "Gestión para residencia estudiantil.",
     imagen: "/assets/images/projects/Depauni.png",
     link: "https://psicologia-forense.com"
   },
-   {
+  {
+    titulo: "Ali Amor",
+    descripcion: "Gestión de stock de perfumería.",
+    imagen: "/assets/images/projects/aliamor.png",
+    link: "https://perfumeria-1v1p.onrender.com/"
+  },
+  {
     titulo: "Portafolio",
-    descripcion: "Diseño web e identidad de marca",
-     imagen: "/assets/images/projects/Critofer-Sani.png",
+    descripcion: "Diseño y desarrollo personal.",
+    imagen: "/assets/images/projects/Critofer-Sani.png",
     link: "https://cristofersani.vercel.app"
-  },
-   {
-    titulo: "Camper Box",
-    descripcion: "Diseño web e identidad de marca",
-    imagen: "/assets/img/camper.jpg",
-    link: "https://psicologia-forense.com"
-  },
-   {
-    titulo: "Camper Box",
-    descripcion: "Diseño web e identidad de marca",
-    imagen: "/assets/img/camper.jpg",
-    link: "https://psicologia-forense.com"
   }
 ];
