@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import EstadoTrabajo from "./EstadoTrabajo";
-import cristoferImg from "../assets/images/cristofer-sani.png";
+import cristoferImg from "../assets/images/cristofer-sani.svg";
 import Acerca from "../components/Acerca";
 
 // Variants para animaciones framer-motion
