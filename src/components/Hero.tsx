@@ -69,25 +69,11 @@ const Hero: React.FC = () => {
     >
       <div className="container-fluid">
         <div className="row align-items-center">
-          {/* Imagen */}
+          {/* Contenido a la izquierda */}
           <motion.div
-            className="col-12 col-md-6 text-center mb-4 mb-md-0"
-            variants={imageVariants}
+            className="col-12 col-md-6 order-md-1"
+            variants={textVariants}
           >
-            <img
-              src={cristoferImg}
-              alt="Cristofer Sani"
-              className="img-fluid rounded"
-              style={{
-                maxWidth: isMobile ? "90%" : "100%",
-                height: "auto",
-                objectFit: "cover",
-              }}
-            />
-          </motion.div>
-
-          {/* Contenido */}
-          <motion.div className="col-12 col-md-5" variants={textVariants}>
             <div className="mt-4">
               <EstadoTrabajo />
             </div>
@@ -130,36 +116,22 @@ const Hero: React.FC = () => {
               </span>
             </motion.h2>
 
-            <motion.div className="text-center">
-              <img
-                src="/arrow.png"
-                alt="Cristofer Sani"
-                className="img-fluid rounded"
-                style={{
-                  maxWidth: isMobile ? "20%" : "30%",
-                  height: "auto",
-                  objectFit: "cover",
-                }}
-              />
-            </motion.div>
-
             <motion.div
-              className="mt-4 d-flex"
-              style={{ marginLeft: "50px" }}
+              className="mt-4 d-flex justify-content-start gap-3"
               variants={textVariants}
             >
               <a
                 href="https://drive.google.com/file/d/1NU1cn8mE2Sem37C2bEC05xvl3yGytzLQ/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn btn-danger text-light d-flex align-items-center gap-2 px-5 py-3 rounded-pill shadow btn-responsive "
+                className="btn btn-danger text-light d-flex align-items-center gap-2 px-5 py-3 rounded-pill shadow btn-responsive"
                 style={{
                   fontWeight: 600,
                   fontSize: "1.25rem",
                   transition: "transform 0.3s ease, box-shadow 0.3s ease",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = "scale(1.1)"; // un poco más grande al hover
+                  e.currentTarget.style.transform = "scale(1.1)";
                   e.currentTarget.style.boxShadow =
                     "0 6px 16px rgba(0, 0, 0, 0.25)";
                 }}
@@ -183,7 +155,7 @@ const Hero: React.FC = () => {
                 href="https://www.linkedin.com/in/cristofersani/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="icon-hover text-primary d-flex align-items-center "
+                className="icon-hover text-primary d-flex align-items-center"
               >
                 <i className="bi bi-linkedin" style={{ fontSize: "30px" }}></i>
               </a>
@@ -221,6 +193,23 @@ const Hero: React.FC = () => {
                 </svg>
               </a>
             </motion.div>
+          </motion.div>
+
+          {/* Imagen a la derecha */}
+          <motion.div
+            className="col-12 col-md-6 order-md-2 d-flex justify-content-md-end mb-4 mb-md-0"
+            variants={imageVariants}
+          >
+            <img
+              src={cristoferImg}
+              alt="Cristofer Sani"
+              className="img-fluid rounded"
+              style={{
+                maxWidth: isMobile ? "90%" : "80%",
+                height: "auto",
+                objectFit: "cover",
+              }}
+            />
           </motion.div>
         </div>
       </div>
