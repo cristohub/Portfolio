@@ -17,7 +17,7 @@ const Home: React.FC = () => {
         <CallToAction
           titulo="¿Necesitas Un Sitio Web A Medida?"
           descripcion="Cuéntame tu idea y la hacemos realidad."
-          imagen="/cta-image.png"
+          imagen="/fondocall.svg"
           textoBoton="Contactar"
           enlaceBoton="#contacto"
         />

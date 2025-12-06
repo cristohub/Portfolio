@@ -1,11 +1,11 @@
 import React, { useRef } from "react";
-import { motion, useInView } from "framer-motion"; // Sin Variants aquí
+import { motion, useInView } from "framer-motion";
 import BotonLlamada from "./BotonLlamada";
 
 interface CallToActionProps {
   titulo: string;
   descripcion: string;
-  imagen: string;
+  imagen: string; // Imagen de fondo
   textoBoton: string;
   enlaceBoton: string;
 }
@@ -20,26 +20,12 @@ const CallToAction: React.FC<CallToActionProps> = ({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  // Puedes poner el tipo explícito como Record<string, any> para evitar problemas
   const containerVariants: Record<string, any> = {
     hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 1.5,
-        ease: "easeOut",
-        delay: 0.2,
-      },
-    },
-  };
-
-  const imageVariants: Record<string, any> = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 1.2, delay: 0.3, ease: "easeOut" },
+      transition: { duration: 1.5, ease: "easeOut", delay: 0.2 },
     },
   };
 
@@ -55,30 +41,25 @@ const CallToAction: React.FC<CallToActionProps> = ({
   return (
     <motion.section
       ref={ref}
-      className="py-5"
-      style={{ backgroundColor: "#a6eeff", borderRadius: "34px" }}
+      className="relative py-5 rounded-[34px] overflow-hidden"
+      style={{
+        backgroundImage: `url(${imagen})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        color: "#fff",
+      }}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
     >
-      <div className="container">
-        <div className="row align-items-center">
-          {/* Imagen */}
-          <motion.div
-            className="col-md-6 text-center mb-4 mb-md-0"
-            variants={imageVariants}
-          >
-            <img
-              src={imagen}
-              alt="Imagen Call To Action"
-              className="img-fluid"
-              style={{ maxWidth: "90%" }}
-            />
-          </motion.div>
+      {/* Overlay oscuro */}
+      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
+      <div className="container relative z-10">
+        <div className="row align-items-center">
           {/* Texto */}
-          <motion.div className="col-md-6 text-center" variants={textVariants}>
-            <h2 className="fw-bold text-primary">{titulo}</h2>
+          <motion.div className="col-md-12 text-center" variants={textVariants}>
+            <h2 className="fw-bold text-white">{titulo}</h2>
             <p className="fs-5 mb-4">{descripcion}</p>
             <BotonLlamada texto={textoBoton} enlace={enlaceBoton} icono=">" />
           </motion.div>
