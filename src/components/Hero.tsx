@@ -94,7 +94,6 @@ const Hero: React.FC = () => {
               <span style={{ display: "block" }}>Desarrollador de</span>
               <span
                 style={{
-                  display: "block",
                   whiteSpace: "nowrap", // evita corte de palabras
                   background: "linear-gradient(90deg, #6a00f4, #a300ff)",
                   color: "white",
