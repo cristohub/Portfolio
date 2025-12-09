@@ -52,12 +52,11 @@ const CallToAction: React.FC<CallToActionProps> = ({
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
     >
-      {/* Overlay oscuro */}
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div className="absolute inset-0 bg-black/50"></div>
 
+      {/* Contenido visible encima del overlay */}
       <div className="container relative z-10">
         <div className="row align-items-center">
-          {/* Texto */}
           <motion.div className="col-md-12 text-center" variants={textVariants}>
             <h2 className="fw-bold text-white">{titulo}</h2>
             <p className="fs-5 mb-4">{descripcion}</p>

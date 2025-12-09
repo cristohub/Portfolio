@@ -51,7 +51,7 @@ const ContactSection: React.FC = () => {
         ></div>
 
         <p className="text-sm mt-2">
-          Si no puedes usar el calendario, envíame un correo a{" "}
+          Si no puedes usar el Calendly, envíame un correo a{" "}
           <a
             href="mailto:cristofersani04@ejemplo.com"
             className="text-blue-600 underline"

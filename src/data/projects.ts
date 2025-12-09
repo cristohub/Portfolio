@@ -28,7 +28,7 @@ export const projects: Project[] = [
     titulo: "DepaUni",
     descripcion: "Gestión para residencia estudiantil.",
     imagen: "/assets/images/projects/Depauni.png",
-    link: "https://psicologia-forense.com"
+    link: "https://drive.google.com/file/d/1jMHmlNEIh95Nrkz0tXhKKq9LGQM0AIQY/view?usp=sharing"
   },
   {
     titulo: "Ali Amor",
