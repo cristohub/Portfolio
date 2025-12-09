@@ -13,12 +13,19 @@ const CardProyecto: React.FC<Props> = ({
   imagen,
   link,
 }) => {
+  const Wrapper: any = link ? "a" : "div";
+
   return (
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
+    <Wrapper
+      {...(link
+        ? {
+            href: link,
+            target: "_blank",
+            rel: "noopener noreferrer",
+          }
+        : {})}
       className="text-decoration-none"
+      style={{ cursor: link ? "pointer" : "default" }}
     >
       <div
         className="card text-white flex-shrink-0 position-relative overflow-hidden"
@@ -29,8 +36,8 @@ const CardProyecto: React.FC<Props> = ({
           backgroundSize: "cover",
           backgroundPosition: "center",
           borderRadius: "15px",
-          cursor: "pointer",
           transition: "transform 0.3s ease",
+          cursor: link ? "pointer" : "default",
         }}
       >
         <div className="overlay position-absolute top-0 start-0 w-100 h-100"></div>
@@ -43,7 +50,7 @@ const CardProyecto: React.FC<Props> = ({
         <style>
           {`
             .card:hover {
-              transform: scale(1.05);
+              transform: ${link ? "scale(1.05)" : "none"};
             }
 
             .overlay {
@@ -53,7 +60,9 @@ const CardProyecto: React.FC<Props> = ({
             }
 
             .card:hover .overlay {
-              background-color: rgba(0, 0, 0, 0.6);
+              background-color: ${
+                link ? "rgba(0, 0, 0, 0.6)" : "rgba(0, 0, 0, 0)"
+              };
             }
 
             .contenido {
@@ -63,12 +72,12 @@ const CardProyecto: React.FC<Props> = ({
             }
 
             .card:hover .contenido {
-              opacity: 1;
+              opacity: ${link ? "1" : "0"};
             }
           `}
         </style>
       </div>
-    </a>
+    </Wrapper>
   );
 };
 

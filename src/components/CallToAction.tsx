@@ -43,7 +43,7 @@ const CallToAction: React.FC<CallToActionProps> = ({
       ref={ref}
       className="relative py-5 rounded-[34px] overflow-hidden"
       style={{
-        backgroundImage: `url(${imagen})`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${imagen})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         color: "#fff",
@@ -52,9 +52,7 @@ const CallToAction: React.FC<CallToActionProps> = ({
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
     >
-      <div className="absolute inset-0 bg-black/50"></div>
-
-      {/* Contenido visible encima del overlay */}
+      {/* Contenido visible encima de la imagen oscurecida */}
       <div className="container relative z-10">
         <div className="row align-items-center">
           <motion.div className="col-md-12 text-center" variants={textVariants}>

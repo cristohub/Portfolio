@@ -95,11 +95,7 @@ const Hero: React.FC = () => {
               <span
                 style={{
                   whiteSpace: "nowrap", // evita corte de palabras
-                  background: "linear-gradient(90deg, #6a00f4, #a300ff)",
-                  color: "white",
-                  padding: "0.2em 0.5em",
-                  borderRadius: "0.3em",
-                  boxShadow: "0 0.2em 0.5em rgba(0,0,0,0.2)",
+
                   display: "inline-block",
                 }}
               >
@@ -130,8 +126,8 @@ const Hero: React.FC = () => {
                   e.currentTarget.style.boxShadow = "0 0 0 transparent";
                 }}
               >
-                <i className="bi bi-box-arrow-up-right"></i>
                 Ver CV
+                <i className="bi bi-box-arrow-up-right"></i>
               </a>
             </motion.div>
 

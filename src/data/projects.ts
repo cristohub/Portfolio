@@ -26,15 +26,15 @@ export const projects: Project[] = [
   },
   {
     titulo: "DepaUni",
-    descripcion: "Gestión para residencia estudiantil.",
+    descripcion: "Memoria Proyecto Final CFGS: Gestión para residencia estudiantil.",
     imagen: "/assets/images/projects/Depauni.png",
     link: "https://drive.google.com/file/d/1jMHmlNEIh95Nrkz0tXhKKq9LGQM0AIQY/view?usp=sharing"
   },
   {
     titulo: "Ali Amor",
-    descripcion: "Gestión de stock de perfumería.",
+    descripcion: "Projecto en Desarrollo - Perfumería.",
     imagen: "/assets/images/projects/aliamor.png",
-    link: "https://perfumeria-1v1p.onrender.com/"
+    link: ""
   },
   {
     titulo: "Portafolio",
