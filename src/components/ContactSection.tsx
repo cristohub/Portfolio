@@ -56,7 +56,7 @@ const ContactSection: React.FC = () => {
             href="mailto:cristofersani04@ejemplo.com"
             className="text-blue-600 underline"
           >
-            cristofersani04@ejemplo.com
+            cristofersani04@gmail.com
           </a>
           .
         </p>
