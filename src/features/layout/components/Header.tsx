@@ -17,12 +17,10 @@ const Header: React.FC = () => {
     <>
       <header className="z-3" id="headerTop">
         <nav className="navbar navbar-expand-lg px-3 px-lg-5 custom-navbar">
-          {/* Logo */}
           <a className="golden-badge navbar-brand fw-bold fs-4 text-white d-flex align-items-center px-2 py-2">
             <img src="/Logo.png" alt="Logo" style={{ height: "80px" }} />
           </a>
 
-          {/* Botón menú móvil */}
           <button
             className="navbar-toggler"
             type="button"
@@ -32,7 +30,6 @@ const Header: React.FC = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          {/* Menú escritorio */}
           <div className="d-none d-lg-flex flex-grow-1 justify-content-end">
             <ul className="navbar-nav align-items-center">
               {navLinks.map((link) => (
@@ -42,7 +39,6 @@ const Header: React.FC = () => {
           </div>
         </nav>
 
-        {/* Sidebar móvil */}
         <div className={`sidebar-menu ${menuOpen ? "open" : ""}`}>
           <button className="close-btn" onClick={() => setMenuOpen(false)}>
             ×
@@ -59,7 +55,6 @@ const Header: React.FC = () => {
         </div>
       </header>
 
-      {/* ESTILOS */}
       <style>{`
         body.no-scroll {
           overflow: hidden;
@@ -72,13 +67,11 @@ const Header: React.FC = () => {
           border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        /* Ajuste de navbar para que logo y links no estén tan a los extremos */
         .navbar {
           padding-left: 2rem;
           padding-right: 2rem;
         }
 
-        /* NAVBAR LINKS ESPACIADOS */
         .navbar-nav {
           display: flex;
           gap: 1.5rem;
@@ -108,7 +101,6 @@ const Header: React.FC = () => {
           width: 100%;
         }
 
-        /* Sidebar móvil */
         .sidebar-menu {
           position: fixed;
           top: 0;

@@ -1,10 +1,9 @@
 // src/App.tsx
 import React from "react";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Home from "./pages/Home";
-
-import WhatsAppButton from "./components/WhatsAppButton";
+import Header from "./features/layout/components/Header";
+import Footer from "./features/layout/components/Footer";
+import Home from "./features/home/pages/Home";
+import WhatsAppButton from "./features/layout/components/WhatsAppButton";
 
 const App: React.FC = () => {
   return (

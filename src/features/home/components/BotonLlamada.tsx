@@ -3,17 +3,13 @@ import { motion } from "framer-motion";
 
 interface BotonLlamadaProps {
   texto: string;
-  enlace: string; // Usa el mismo formato con # que el id del destino, p. ej. "#contacto"
+  enlace: string;
   icono?: string;
 }
 
-const BotonLlamada: React.FC<BotonLlamadaProps> = ({
-  texto,
-  enlace,
-  icono,
-}) => {
+const BotonLlamada: React.FC<BotonLlamadaProps> = ({ texto, enlace, icono }) => {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault(); // evitamos el salto brusco
+    e.preventDefault();
     const target = document.querySelector(enlace);
     if (target) {
       target.scrollIntoView({ behavior: "smooth", block: "start" });

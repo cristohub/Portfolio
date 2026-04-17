@@ -11,7 +11,6 @@ const Tecnologias: React.FC = () => {
   const isDragging = useRef(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Velocidad del scroll automático (pixeles por frame)
   const velocidad = 1;
 
   useEffect(() => {
@@ -20,7 +19,7 @@ const Tecnologias: React.FC = () => {
     const animar = () => {
       if (!isDragging.current) {
         const anchoContenedor = containerRef.current?.scrollWidth || 0;
-        const maxDesplazamiento = -(anchoContenedor / 2); // Reset cuando pasa la mitad
+        const maxDesplazamiento = -(anchoContenedor / 2);
 
         let nuevoX = x.get() - velocidad;
 
@@ -62,7 +61,6 @@ const Tecnologias: React.FC = () => {
             overflow: "hidden",
           }}
         >
-          {/* Degradados laterales para disimular el corte */}
           <div
             style={{
               position: "absolute",

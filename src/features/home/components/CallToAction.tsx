@@ -1,11 +1,12 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import type { Variants } from "framer-motion";
 import BotonLlamada from "./BotonLlamada";
 
 interface CallToActionProps {
   titulo: string;
   descripcion: string;
-  imagen: string; // Imagen de fondo
+  imagen: string;
   textoBoton: string;
   enlaceBoton: string;
 }
@@ -20,7 +21,7 @@ const CallToAction: React.FC<CallToActionProps> = ({
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const containerVariants: Record<string, any> = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
@@ -29,7 +30,7 @@ const CallToAction: React.FC<CallToActionProps> = ({
     },
   };
 
-  const textVariants: Record<string, any> = {
+  const textVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
@@ -52,7 +53,6 @@ const CallToAction: React.FC<CallToActionProps> = ({
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
     >
-      {/* Contenido visible encima de la imagen oscurecida */}
       <div className="container relative z-10">
         <div className="row align-items-center">
           <motion.div className="col-md-12 text-center" variants={textVariants}>

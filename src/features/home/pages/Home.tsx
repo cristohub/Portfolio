@@ -1,10 +1,8 @@
 import React from "react";
-
 import CallToAction from "../components/CallToAction";
-import ContactSection from "../components/ContactSection";
-import SliderProjects from "../components/SliderProjects";
-
 import Hero from "../components/Hero";
+import SliderProjects from "../../projects/components/SliderProjects";
+import ContactSection from "../../contact/components/ContactSection";
 
 const Home: React.FC = () => {
   return (

@@ -15,18 +15,16 @@ const ContactSection: React.FC = () => {
       document.body.appendChild(script);
     }
 
-    // Ajustar la altura del widget según la ventana
     const adjustHeight = () => {
       if (calendlyRef.current) {
-        // 80% del viewport, pero al menos 600px y espacio extra de 2rem
         const newHeight = Math.max(window.innerHeight * 0.8, 600);
         calendlyRef.current.style.height = `${newHeight}px`;
         calendlyRef.current.style.paddingBottom = "2rem";
       }
     };
 
-    adjustHeight(); // Ajuste inicial
-    window.addEventListener("resize", adjustHeight); // Ajuste al cambiar tamaño
+    adjustHeight();
+    window.addEventListener("resize", adjustHeight);
 
     return () => {
       window.removeEventListener("resize", adjustHeight);

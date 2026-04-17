@@ -16,9 +16,8 @@ const BotonTecnologia: React.FC<BotonTecnologiaProps> = ({ nombre, icono }) => {
     boxShadow: hover
       ? "0 8px 15px rgba(0, 0, 0, 0.2)"
       : "0 1px 3px rgba(0, 0, 0, 0.1)",
-    width: "auto", // Fija ancho para consistencia
+    width: "auto",
     display: "flex",
-
     alignItems: "center",
     padding: "10px 12px",
     backgroundColor: "white",

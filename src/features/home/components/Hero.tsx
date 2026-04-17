@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import EstadoTrabajo from "./EstadoTrabajo";
-import cristoferImg from "../assets/images/cristofer-sani.svg";
-import Acerca from "../components/Acerca";
+import cristoferImg from "../../../assets/images/cristofer-sani.svg";
+import Acerca from "./Acerca";
+import { useWindowSize } from "../../../shared/hooks/useWindowSize";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -32,22 +33,6 @@ const imageVariants: Variants = {
   visible: { opacity: 1, transition: { duration: 1, ease: "easeOut" } },
 };
 
-function useWindowSize() {
-  const [size, setSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
-
-  useEffect(() => {
-    const handleResize = () =>
-      setSize({ width: window.innerWidth, height: window.innerHeight });
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  return size;
-}
-
 const Hero: React.FC = () => {
   const { width } = useWindowSize();
   const isMobile = width <= 768;
@@ -65,7 +50,6 @@ const Hero: React.FC = () => {
           className="d-flex flex-column flex-md-row align-items-center justify-content-between"
           style={{ minHeight: "80vh" }}
         >
-          {/* Texto */}
           <motion.div
             className="d-flex flex-column align-items-center align-items-md-start text-center text-md-start mb-4 mb-md-0"
             style={{ flex: 1 }}
@@ -94,8 +78,7 @@ const Hero: React.FC = () => {
               <span style={{ display: "block" }}>Desarrollador de</span>
               <span
                 style={{
-                  whiteSpace: "nowrap", // evita corte de palabras
-
+                  whiteSpace: "nowrap",
                   display: "inline-block",
                 }}
               >
@@ -137,7 +120,6 @@ const Hero: React.FC = () => {
               className="d-flex gap-4 align-items-center fs-3 justify-content-center justify-content-md-start"
               variants={textVariants}
             >
-              {/* LinkedIn */}
               <a
                 href="https://www.linkedin.com/in/cristofersani/"
                 target="_blank"
@@ -146,7 +128,6 @@ const Hero: React.FC = () => {
               >
                 <i className="bi bi-linkedin" style={{ fontSize: "30px" }}></i>
               </a>
-              {/* Gmail */}
               <a
                 href="mailto:cristofersani04@gmail.com"
                 target="_blank"
@@ -163,7 +144,6 @@ const Hero: React.FC = () => {
                   }}
                 />
               </a>
-              {/* Teléfono */}
               <a
                 href="tel:+34691010409"
                 className="icon-hover d-flex align-items-center"
@@ -182,7 +162,6 @@ const Hero: React.FC = () => {
             </motion.div>
           </motion.div>
 
-          {/* Imagen */}
           <motion.div
             className="d-flex justify-content-center justify-content-md-end"
             style={{ flex: 1 }}

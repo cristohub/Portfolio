@@ -16,8 +16,6 @@ export const footerLinks: FooterLink[] = [
     links: [
       { name: "Email", url: "mailto:info@depauni.com" },
       { name: "Linkedin", url: "#" },
-      
     ],
   },
- 
 ];
