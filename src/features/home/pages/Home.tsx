@@ -1,6 +1,8 @@
 import React from "react";
 import CallToAction from "../components/CallToAction";
 import Hero from "../components/Hero";
+import Statistics from "../components/Statistics";
+import AboutFounder from "../components/AboutFounder";
 import SliderProjects from "../../projects/components/SliderProjects";
 import ContactSection from "../../contact/components/ContactSection";
 
@@ -10,6 +12,10 @@ const Home: React.FC = () => {
       <section style={{ borderRadius: "0 0 34px 34px", background: "" }}>
         <Hero />
       </section>
+
+      <AboutFounder />
+
+      <Statistics />
 
       <section>
         <CallToAction

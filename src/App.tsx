@@ -1,21 +1,35 @@
-// src/App.tsx
-import React from "react";
-import Header from "./features/layout/components/Header";
-import Footer from "./features/layout/components/Footer";
-import Home from "./features/home/pages/Home";
+import { LanguageProvider } from "./context/LanguageContext";
+import { Navbar } from "./features/agency/components/Navbar";
+import { Hero } from "./features/agency/components/Hero";
+import { ServicesSection } from "./features/agency/components/ServicesSection";
+import { ProjectsSection } from "./features/agency/components/ProjectsSection";
+import { WhyUsSection } from "./features/agency/components/WhyUsSection";
+import { QRRequestSection } from "./features/agency/components/QRRequestSection";
+import { AgencyFooter } from "./features/agency/components/AgencyFooter";
+import AboutFounder from "./features/home/components/AboutFounder";
 import WhatsAppButton from "./features/layout/components/WhatsAppButton";
+import BriefingPage from "./pages/BriefingPage";
 
-const App: React.FC = () => {
+function App() {
   return (
-    <div className="d-flex flex-column min-vh-100">
-      <Header />
-      <main className=" mt-4 flex-grow-1 ">
-        <Home />
-      </main>
-      <Footer />
-      <WhatsAppButton />
-    </div>
+    <LanguageProvider>
+      <div className="bg-[#0a0a0f] text-white min-h-screen">
+        <Navbar />
+        <Hero />
+        <AboutFounder />
+        <ServicesSection />
+        <ProjectsSection />
+        <WhyUsSection />
+        <QRRequestSection />
+
+        <section id="briefing" className="scroll-mt-24">
+          <BriefingPage />
+        </section>
+        <AgencyFooter />
+        <WhatsAppButton />
+      </div>
+    </LanguageProvider>
   );
-};
+}
 
 export default App;

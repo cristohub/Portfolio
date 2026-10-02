@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const float = (delay: number, range = 7) => ({
   animate: {
     y: [0, -range, 0],
-    transition: { duration: 3.2 + delay * 0.5, repeat: Infinity, ease: "easeInOut", delay },
+    transition: { duration: 3.2 + delay * 0.5, repeat: Infinity, ease: [0.42, 0, 0.58, 1] as const, delay },
   },
 });
 
@@ -119,7 +119,7 @@ const FooterHero: React.FC = () => {
           </p>
           <div style={{ display: "flex", alignItems: "center", gap: 6, marginTop: 6 }}>
             <img
-              src="/Cristofer-Sani.png"
+              src="/assets/images/cristofer/Cristofer-Sani.svg"
               alt="Cristofer"
               style={{ width: 20, height: 20, borderRadius: "50%", objectFit: "cover", background: "#ddd" }}
             />

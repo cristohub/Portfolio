@@ -2,7 +2,6 @@ import React from "react";
 import { motion } from "framer-motion";
 import type { Variants } from "framer-motion";
 import EstadoTrabajo from "./EstadoTrabajo";
-import cristoferImg from "../../../assets/images/cristofer-sani.svg";
 import Acerca from "./Acerca";
 import { useWindowSize } from "../../../shared/hooks/useWindowSize";
 
@@ -26,11 +25,6 @@ const textVariants: Variants = {
     scale: 1,
     transition: { duration: 0.6, ease: "easeOut" },
   },
-};
-
-const imageVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 1, ease: "easeOut" } },
 };
 
 const Hero: React.FC = () => {
@@ -145,7 +139,7 @@ const Hero: React.FC = () => {
                 />
               </a>
               <a
-                href="tel:+34691010409"
+                href="tel:+593969474171"
                 className="icon-hover d-flex align-items-center"
                 style={{ color: "green" }}
               >
@@ -160,24 +154,6 @@ const Hero: React.FC = () => {
                 </svg>
               </a>
             </motion.div>
-          </motion.div>
-
-          <motion.div
-            className="d-flex justify-content-center justify-content-md-end"
-            style={{ flex: 1 }}
-            variants={imageVariants}
-          >
-            <img
-              src={cristoferImg}
-              alt="Cristofer Sani"
-              className="img-fluid rounded"
-              style={{
-                maxWidth: isMobile ? "80%" : "90%",
-                height: "auto",
-                objectFit: "cover",
-                alignSelf: "center",
-              }}
-            />
           </motion.div>
         </div>
       </div>

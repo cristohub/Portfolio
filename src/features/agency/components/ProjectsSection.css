@@ -1,0 +1,80 @@
+/* Projects Section Styles */
+
+.projects-section {
+  background: linear-gradient(180deg, #f9f7f4 0%, #fdfcfb 100%);
+}
+
+/* Smooth transitions for project cards */
+.project-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+  transform: translateY(-12px);
+}
+
+/* Premium typography */
+.projects-title {
+  font-family: 'Syne', system-ui, sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.project-card-title {
+  font-family: 'Syne', system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+/* Subtle background gradients */
+.project-bg-gradient-1 {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(16, 185, 129, 0.02) 100%);
+}
+
+.project-bg-gradient-2 {
+  background: linear-gradient(135deg, rgba(216, 180, 254, 0.08) 0%, rgba(216, 180, 254, 0.02) 100%);
+}
+
+.project-bg-gradient-3 {
+  background: linear-gradient(135deg, rgba(252, 211, 77, 0.08) 0%, rgba(252, 211, 77, 0.02) 100%);
+}
+
+.project-bg-gradient-4 {
+  background: linear-gradient(135deg, rgba(124, 58, 237, 0.08) 0%, rgba(124, 58, 237, 0.02) 100%);
+}
+
+.project-bg-gradient-5 {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.08) 0%, rgba(6, 182, 212, 0.02) 100%);
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 1024px) {
+  .projects-title {
+    font-size: 3.5rem;
+  }
+
+  .project-card-title {
+    font-size: 1.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-title {
+    font-size: 2.5rem;
+  }
+
+  .project-card-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Premium shadow effect on hover */
+.project-card-premium {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.3s ease;
+}
+
+.project-card-premium:hover {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+}

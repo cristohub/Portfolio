@@ -14,9 +14,7 @@ const CardProyecto: React.FC<Props> = ({ titulo, descripcion, imagen, link }) =>
       style={{
         width: "300px",
         height: "350px",
-        backgroundImage: `url(${imagen})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
+        ...(imagen ? { backgroundImage: `url(${imagen})`, backgroundSize: "cover", backgroundPosition: "center" } : { backgroundColor: "#333" }),
         borderRadius: "15px",
         transition: "transform 0.3s ease",
         cursor: link ? "pointer" : "default",

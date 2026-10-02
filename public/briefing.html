@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Briefing Técnico | Cristofer Sani</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#0071e3'
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="min-h-screen bg-zinc-950 text-white">
+  <main class="mx-auto flex min-h-screen max-w-7xl flex-col px-6 py-8 sm:px-8 lg:px-8 lg:py-10">
+    <header class="mb-8 flex items-center justify-between">
+      <a href="/" class="text-sm font-medium text-zinc-400 transition hover:text-white">
+        ← Volver al inicio
+      </a>
+      <span
+        class="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.3em] text-sky-400/90">
+        Diagnóstico técnico
+      </span>
+    </header>
+
+    <section class="grid flex-1 gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+      <div
+        class="rounded-[2rem] border border-white/10 bg-gradient-to-br from-zinc-900 via-zinc-950 to-black p-8 shadow-[0_0_0_1px_rgba(255,255,255,0.03),0_30px_80px_rgba(0,0,0,0.45)] sm:p-10 lg:p-12">
+        <p class="mb-4 text-[11px] font-semibold uppercase tracking-[0.35em] text-sky-400/90">
+          Sistema de diagnóstico interactivo
+        </p>
+        <h1 class="max-w-2xl text-3xl font-semibold tracking-[-0.02em] text-white sm:text-4xl lg:text-5xl">
+          Describe tu proyecto y te guiamos hacia la mejor solución digital.
+        </h1>
+        <p class="mt-5 max-w-2xl text-base leading-8 text-zinc-300 sm:text-lg">
+          Este breve formulario nos ayuda a entender el contexto, los objetivos y la urgencia de tu proyecto para
+          preparar un diagnóstico técnico más preciso.
+        </p>
+
+        <div class="mt-8 space-y-4 rounded-2xl border border-white/10 bg-white/5 p-6">
+          <div class="flex items-start gap-3">
+            <div class="mt-1 h-2.5 w-2.5 rounded-full bg-sky-400"></div>
+            <div>
+              <p class="font-medium text-white">Respuesta en menos de 24 horas</p>
+              <p class="text-sm text-zinc-400">Diseñamos una propuesta acorde a tus necesidades reales.</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="mt-1 h-2.5 w-2.5 rounded-full bg-sky-400"></div>
+            <div>
+              <p class="font-medium text-white">Enfoque técnico y comercial</p>
+              <p class="text-sm text-zinc-400">Combinamos estrategia, rendimiento y experiencia de usuario.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="rounded-[2rem] border border-white/10 bg-zinc-900/80 p-6 shadow-[0_20px_70px_rgba(0,0,0,0.35)] sm:p-8 lg:p-8">
+        <form id="briefingForm" class="space-y-5">
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="name" class="mb-2 block text-sm font-medium text-zinc-200">Nombre</label>
+              <input id="name" name="name" type="text" required
+                class="w-full rounded-2xl border border-white/10 bg-zinc-950/80 px-4 py-3 text-sm text-white outline-none ring-0 transition focus:border-sky-400"
+                placeholder="Tu nombre" />
+            </div>
+            <div>
+              <label for="company" class="mb-2 block text-sm font-medium text-zinc-200">Empresa</label>
+              <input id="company" name="company" type="text" required
+                class="w-full rounded-2xl border border-white/10 bg-zinc-950/80 px-4 py-3 text-sm text-white outline-none ring-0 transition focus:border-sky-400"
+                placeholder="Nombre de la empresa" />
+            </div>
+          </div>
+
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="email" class="mb-2 block text-sm font-medium text-zinc-200">Email</label>
+              <input id="email" name="email" type="email" required
+                class="w-full rounded-2xl border border-white/10 bg-zinc-950/80 px-4 py-3 text-sm text-white outline-none ring-0 transition focus:border-sky-400"
+                placeholder="tu@email.com" />
+            </div>
+            <div>
+              <label for="phone" class="mb-2 block text-sm font-medium text-zinc-200">Teléfono</label>
+              <input id="phone" name="phone" type="tel"
+                class="w-full rounded-2xl border border-white/10 bg-zinc-950/80 px-4 py-3 text-sm text-white outline-none ring-0 transition focus:border-sky-400"
+                placeholder="+34 600 000 000" />
+            </div>
+          </div>
+
+          <div>
+            <label for="project" class="mb-2 block text-sm font-medium text-zinc-200">Tipo de proyecto</label>
+            <select id="project" name="project"
+              class="w-full rounded-2xl border border-white/10 bg-zinc-950/80 px-4 py-3 text-sm text-white outline-none ring-0 transition focus:border-sky-400">
+              <option value="Web corporativa">Web corporativa</option>
+              <option value="Tienda online">Tienda online</option>
+              <option value="App web o SaaS">App web o SaaS</option>
+              <option value="Landing page">Landing page</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="mb-2 block text-sm font-medium text-zinc-200">Cuéntanos tu objetivo</label>
+            <textarea id="message" name="message" rows="5" required
+              class="w-full rounded-2xl border border-white/10 bg-zinc-950/80 px-4 py-3 text-sm text-white outline-none ring-0 transition focus:border-sky-400"
+              placeholder="¿Qué necesitas mejorar o construir?"></textarea>
+          </div>
+
+          <button type="submit"
+            class="inline-flex w-full items-center justify-center rounded-full bg-[#0071e3] px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-[#1488ff] hover:shadow-[0_10px_30px_rgba(0,113,227,0.35)]">
+            Enviar diagnóstico
+          </button>
+
+          <p id="formMessage" class="text-sm text-zinc-400"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const form = document.getElementById('briefingForm');
+    const messageBox = document.getElementById('formMessage');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+
+      if (!name || !email) {
+        messageBox.textContent = 'Completa tu nombre y email para enviar el diagnóstico.';
+        messageBox.className = 'text-sm text-amber-400';
+        return;
+      }
+
+      messageBox.textContent = `Gracias, ${name}. Hemos recibido tu solicitud y te contactaremos pronto.`;
+      messageBox.className = 'text-sm text-emerald-400';
+      form.reset();
+    });
+  </script>
+</body>
+
+</html>

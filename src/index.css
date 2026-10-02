@@ -1,69 +1,175 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import "tailwindcss";
 
-:root {
-  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
-}
-
-
-
-.btn-animado {
-  border-radius: 34px;
-  font-weight: 600;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-}
-
-.btn-animado:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
-  
-}
-
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* centra verticalmente */
-  padding: 0 1rem; /* un poco de padding horizontal para que no pegue a los bordes */
-  box-sizing: border-box;
-}
-
-
-.icon-hover {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-}
-.icon-hover:hover {
-  transform: scale(1.2);
-  filter: brightness(1.2);
-}
-
-
-
-
-
-@media (max-width: 450px) {
-  .btn-responsive {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 80%;          /* que ocupe todo el ancho */
-    padding: 0.75rem 1rem; /* menos padding para que no quede gigante */
-    font-size: 1rem;      /* tamaño más pequeño para móvil */
-    box-sizing: border-box; /* que el padding no aumente el ancho */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply bg-[#0a0a0f] text-white;
   }
+
+  body {
+    @apply m-0 p-0 overflow-x-hidden;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Syne', system-ui, sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer components {
+  .btn-primary-accent {
+    @apply px-6 py-3 bg-[#7c3aed] text-white font-semibold rounded-lg hover:bg-[#6d28d9] transition-all duration-300 ease-in-out;
+  }
+
+  .btn-outline-white {
+    @apply px-6 py-3 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-[#0a0a0f] transition-all duration-300 ease-in-out;
+  }
+
+  .card-glow {
+    @apply border border-[#6b7280] rounded-xl p-6 transition-all duration-300 ease-in-out;
+    background: rgba(10, 10, 15, 0.9);
+  }
+
+  .card-glow:hover {
+    @apply border-[#7c3aed];
+    box-shadow: 0 0 20px 2px rgba(124, 58, 237, 0.3);
+  }
+
+  .nav-link {
+    @apply text-[#e5e5e5] font-medium hover:text-white transition-colors;
+  }
+
+  .glassmorphism {
+    @apply backdrop-blur-xl bg-white/10 border border-white/20 rounded-xl;
+  }
+
+  .gradient-border {
+    @apply relative border border-transparent rounded-xl bg-gradient-to-r from-[#7c3aed] to-[#a855f7] bg-clip-padding;
+  }
+}
+
+@layer utilities {
+  .smooth-scroll {
+    @apply scroll-smooth;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* Animated Orb */
+.orb {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, #a855f7, #7c3aed, #4c1d95, transparent);
+  filter: blur(1px);
+  box-shadow: 0 0 80px 20px rgba(124, 58, 237, 0.4);
+  animation: float 6s ease-in-out infinite, rotate-orb 20s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes rotate-orb {
+  from {
+    filter: hue-rotate(0deg) blur(1px);
+  }
+  to {
+    filter: hue-rotate(30deg) blur(1px);
+  }
+}
+
+/* Fade in on scroll */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out forwards;
+  opacity: 0;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .orb {
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 60px 15px rgba(124, 58, 237, 0.3);
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .orb {
+    width: 250px;
+    height: 250px;
+    box-shadow: 0 0 40px 10px rgba(124, 58, 237, 0.2);
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Grid background pattern */
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(0deg, transparent 24%, rgba(124, 58, 237, 0.05) 25%, rgba(124, 58, 237, 0.05) 26%, transparent 27%, transparent 74%, rgba(124, 58, 237, 0.05) 75%, rgba(124, 58, 237, 0.05) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(124, 58, 237, 0.05) 25%, rgba(124, 58, 237, 0.05) 26%, transparent 27%, transparent 74%, rgba(124, 58, 237, 0.05) 75%, rgba(124, 58, 237, 0.05) 76%, transparent 77%, transparent);
+  background-size: 50px 50px;
+}
+
+/* Animated gradient text */
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-gradient {
+  animation: gradient-shift 3s ease infinite;
+  background-size: 200% 200%;
+}
+
+/* Smooth hover effects for interactive elements */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
