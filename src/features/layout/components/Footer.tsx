@@ -1,22 +1,54 @@
 import React from "react";
-import FooterItem from "./FooterItem";
 import FooterHero from "./FooterHero";
-import { footerLinks } from "../data/footerLinks";
+import "./Footer.css";
+import {
+  footerEmail,
+  footerDescription,
+  footerOwnerName,
+  footerSocialLinks,
+} from "../data/footerConfig";
+import { footerNavLinks } from "../data/footerNavLinks";
 
 const Footer: React.FC = () => {
   return (
     <footer className="mt-auto">
       <FooterHero />
-      <div className="bg-dark text-white py-4">
-        <div className="container">
-          <div className="row">
-            {footerLinks.map((group, index) => (
-              <FooterItem key={index} {...group} />
+      <div className="footer">
+        <div className="footer__inner">
+          <a
+            className="footer__email"
+            href={`mailto:${footerEmail}`}
+            aria-label="Enviar correo"
+          >
+            {footerEmail}
+          </a>
+          <p className="footer__subtitle">{footerDescription}</p>
+
+          <nav className="footer__nav">
+            {footerNavLinks.map((item, index) => (
+              <a key={index} href={item.href} className="footer__nav-link">
+                {item.label}
+              </a>
+            ))}
+          </nav>
+
+          <div className="footer__socials">
+            {footerSocialLinks.map((social) => (
+              <a
+                key={social.label}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.label}
+                className="footer__social-link"
+              >
+                <i className={social.iconClass}></i>
+              </a>
             ))}
           </div>
-          <hr className="border-light mt-4" />
-          <p className="text-center mb-0">
-            {"\u00A9"} {new Date().getFullYear()} Cristofer Sani.
+
+          <p className="footer__copy">
+            © {new Date().getFullYear()} {footerOwnerName}.
           </p>
         </div>
       </div>

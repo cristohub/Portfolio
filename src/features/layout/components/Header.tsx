@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import NavItem from "./NavItem";
-import { navLinks } from "../data/navLinks";
+import { headerNavLinks } from "../data/headerNavLinks";
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,7 +32,7 @@ const Header: React.FC = () => {
 
           <div className="d-none d-lg-flex flex-grow-1 justify-content-end">
             <ul className="navbar-nav align-items-center">
-              {navLinks.map((link) => (
+              {headerNavLinks.map((link) => (
                 <NavItem key={link.href} {...link} />
               ))}
             </ul>
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
             ×
           </button>
           <ul className="navbar-nav">
-            {navLinks.map((link) => (
+            {headerNavLinks.map((link) => (
               <NavItem
                 key={link.href}
                 {...link}

@@ -6,12 +6,12 @@ interface Props {
 }
 
 const FooterItem: React.FC<Props> = ({ title, links }) => (
-  <div className="col-12 text-center col-md-4">
+  <div className="footer__item">
     <h5>{title}</h5>
-    <ul className="list-unstyled">
+    <ul className="footer__list">
       {links.map((link, idx) => (
         <li key={idx}>
-          <a href={link.url} className="text-white text-decoration-none">
+          <a href={link.url} className="footer__link">
             {link.name}
           </a>
         </li>
